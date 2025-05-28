@@ -1,0 +1,286 @@
+/* panel_admin/panelA.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f7f6;
+    display: flex;
+    min-height: 100vh;
+}
+
+.dashboard {
+    display: flex;
+    width: 100%;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #2c3e50;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+.sidebar-logo {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.sidebar-logo img {
+    width: 150px;
+    height: auto;
+}
+
+.sidebar-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-menu ul li {
+    padding: 15px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar-menu ul li:hover,
+.sidebar-menu ul li.active {
+    background-color: #34495e;
+}
+
+.content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #ecf0f1;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.top-bar h2 {
+    margin: 0;
+    color: #2c3e50;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.user-info img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    object-fit: cover;
+}
+
+.user-info span {
+    font-weight: bold;
+    color: #34495e;
+}
+
+.section-content {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: none; /* Oculta todas las secciones por defecto */
+}
+
+.section-content.active {
+    display: block; /* Muestra la sección activa */
+}
+
+.section-container h3 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.data-table th, .data-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+    color: #34495e;
+}
+
+.data-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.data-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.data-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.ver-ruta-btn {
+    background-color: #5cb85c;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    margin-right: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.ver-ruta-btn:hover {
+    background-color: #4cae4c;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #34495e;
+}
+
+.input-group input[type="text"],
+.input-group input[type="email"],
+.input-group input[type="password"],
+.input-group input[type="number"],
+.input-group input[type="time"],
+.input-group textarea {
+    width: calc(100% - 20px); /* Ajusta el padding */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.input-group textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .dashboard {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        justify-content: center;
+        padding: 10px 0;
+    }
+    .sidebar-logo {
+        display: none; /* Hide logo on small screens */
+    }
+    .sidebar-menu ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .sidebar-menu ul li {
+        padding: 10px 15px;
+        font-size: 0.9em;
+    }
+    .top-bar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .user-info {
+        margin-top: 10px;
+    }
+    .section-content {
+        padding: 15px;
+    }
+}
+/* panel_admin/panelA.css */
+
+.map-coordinates-container {
+    display: flex;
+    gap: 20px; /* Espacio entre el mapa y el panel de info */
+    flex-wrap: wrap; /* Para que se adapte en pantallas pequeñas */
+}
+
+#map-creator {
+    flex: 2; /* El mapa ocupará más espacio */
+    min-width: 400px; /* Ancho mínimo para el mapa */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.map-info-panel {
+    flex: 1; /* El panel de info ocupará el resto del espacio */
+    min-width: 300px; /* Ancho mínimo para el panel */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.map-info-panel h3 {
+    margin-top: 0;
+    color: #333;
+    font-size: 1.3rem;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+#coords-output {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: monospace;
+    font-size: 0.9rem;
+    resize: vertical; /* Permitir redimensionar verticalmente */
+}
+
+.map-info-panel .btn-primary,
+.map-info-panel .btn-secondary {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 12px;
+}
+
+.map-hint {
+    font-size: 0.85rem;
+    color: #777;
+    margin-top: auto; /* Empujar al final */
+    text-align: center;
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+    .map-coordinates-container {
+        flex-direction: column;
+    }
+    #map-creator, .map-info-panel {
+        min-width: unset;
+        width: 100%;
+    }
+}
